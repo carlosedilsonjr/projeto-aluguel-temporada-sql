@@ -1,4 +1,5 @@
 
+
 CREATE TABLE hospedes(
 	id SERIAL PRIMARY KEY,
 	nome varchar(100) NOT NULL,
@@ -19,7 +20,30 @@ CREATE TABLE propriedades(
 	id serial PRIMARY KEY,
 	nome_imovel varchar(70) NOT NULL,
 	capacidade_hospedes int DEFAULT 1,
-	fk_endereco int NOT NULL REFERENCES enderecos(id)
+	fk_endereco int REFERENCES enderecos(id)
 );
+
+ALTER TABLE propriedades
+ADD COLUMN preco_noite numeric(10, 2)
+NOT NULL CHECK (preco_noite > 0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
