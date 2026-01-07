@@ -28,7 +28,14 @@ ADD COLUMN preco_noite numeric(10, 2)
 NOT NULL CHECK (preco_noite > 0);
 
 
-
+CREATE TABLE reservas(
+	id_reserva serial PRIMARY KEY,
+	hospede int NOT NULL REFERENCES hospedes(id),
+	propriedade int NOT NULL REFERENCES propriedades(id),
+	date_inicio date NOT null,
+	data_fim date NOT null,
+	valor_total numeric(8, 2) NOT NULL
+);
 
 
 

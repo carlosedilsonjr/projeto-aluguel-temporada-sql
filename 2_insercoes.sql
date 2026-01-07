@@ -21,3 +21,20 @@ INSERT INTO propriedades (
 ('Studio moderno', 1, 1, 130);
 
 
+INSERT INTO
+reservas(hospede, propriedade, date_inicio, data_fim, valor_total)
+VALUES
+(1, 1, '13/01/2026', '18/01/2026', 1250),
+(3, 4, '10/01/2026', '12/01/2026', 260);
+
+
+
+
+
+
+
+
+
+
+
+
